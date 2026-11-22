@@ -173,7 +173,7 @@
     "tap": "^16.3.9"
   },
   "engines": {
-    "node": "^22.22.2 || ^24.15.0 || \u003e=26.0.0"
+    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
   },
   "exports": {
     ".": [
@@ -203,17 +203,18 @@
   "main": "./index.js",
   "name": "npm",
   "overrides": {
-    "fast-uri@\u003e=2 \u003c3": "2.4.8",
-    "fast-uri@\u003e=3 \u003c4": "3.1.9",
-    "fast-uri@\u003e=4 \u003c5": "4.2.3",
-    "handlebars": "4.7.10"
+    "fast-uri@>=2 <3": "2.4.8",
+    "fast-uri@>=3 <4": "3.1.9",
+    "fast-uri@>=4 <5": "4.2.3",
+    "handlebars": "4.7.10",
+    "source-map-js": "1.2.4"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/npm/cli.git"
   },
   "scripts": {
-    "dependencies": "node scripts/bundle-and-gitignore-deps.js \u0026\u0026 node scripts/dependency-graph.js",
+    "dependencies": "node scripts/bundle-and-gitignore-deps.js && node scripts/dependency-graph.js",
     "dumpconf": "env | grep npm | sort | uniq",
     "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
     "licenses": "npx licensee --production --errors-only",
